@@ -13,9 +13,10 @@ import { Meal } from './Meal.model';
       <new-meal
         (newMealSender)="addMeal($event)"
       ></new-meal>
-    <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#newMeal">Add Meal</button>
-    <br />
-    <br />
+      <edit-meal
+        [editMeal]="selectedMeal"
+        (doneSender)="finished()"
+      ></edit-meal>
   </div>
 
   `

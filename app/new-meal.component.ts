@@ -24,7 +24,7 @@ import { Meal } from './Meal.model';
             </div>
             <div class="form-group">
               <label>Enter Meal Address:</label>
-              <input class="form-control" #newCalories>
+              <input class="form-control" pattern="[0-9]" #newCalories>
             </div>
           </div>
           <div class="modal-footer">

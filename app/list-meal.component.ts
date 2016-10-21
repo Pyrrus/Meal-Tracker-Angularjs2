@@ -15,6 +15,9 @@ import { Meal } from './meal.model';
         </select>
       </div>
     </div>
+    <div class="col-md-3">
+      <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#newMeal">Add Meal</button>
+    </div>
    </div>
 
    <div class="row">
