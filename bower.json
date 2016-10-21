@@ -1,0 +1,13 @@
+{
+  "name": "Meal-Tracker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Adam Gorbahn <adamgorbahn@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
