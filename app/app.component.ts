@@ -24,9 +24,9 @@ import { Meal } from './Meal.model';
 
 export class AppComponent {
   public masterMealList: Meal[] = [
-      new Meal("Fish and chip", "Eat all of it", 1200),
       new Meal("Wall done T-Bone", "bit over cock", 430),
-      new Meal("Ham sandwiche", "It is ok", 200)
+      new Meal("Ham sandwiche", "It is ok", 200),
+      new Meal("Fish and chip", "Eat all of it", 1200),
   ];
 
   selectedMeal: Meal = null;
