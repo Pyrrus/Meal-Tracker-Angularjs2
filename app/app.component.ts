@@ -5,12 +5,14 @@ import { Meal } from './Meal.model';
   selector: 'my-app',
   template: `
   <div class="container">
-    <h1>Maz Kanata Meal list</h1>
+    <h1>Meal Tracker list</h1>
       <meal-list
         [childMealList]="masterMealList"
-        (clickSender)="showDetails($event)"
+        (editSender)="showDetails($event)"
        ></meal-list>
-      
+      <new-meal
+        (newMealSender)="addMeal($event)"
+      ></new-meal>
     <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#newMeal">Add Meal</button>
     <br />
     <br />
@@ -34,11 +36,7 @@ export class AppComponent {
     this.selectedMeal = null;
   }
 
-  addRest(newMealFromChild: Meal) {
+  addMeal(newMealFromChild: Meal) {
     this.masterMealList.push(newMealFromChild);
-  }
-
-  showReview(clickedMeal: Meal) {
-    this.selectedMeal = clickedMeal;
   }
 }

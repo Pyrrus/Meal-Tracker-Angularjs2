@@ -21,9 +21,9 @@ import { Meal } from './meal.model';
       <div *ngFor="let currentMeal of childMealList" class="col-md-4">
         <div class="well">
           <h3>{{ currentMeal.name }} <i class="fa fa-anchor" aria-hidden="true"></i></h3>
+          <p>{{ currentMeal.details }}</p>
           <ul>
-            <li>{{ currentMeal.cetails }}</li>
-            <li>{{ currentMeal.calories }}</li>
+            <li>Calories: {{ currentMeal.calories }}</li>
           </ul>
           <!-- Button trigger modal -->
           <button (click)="editButtonHasBeenClicked(currentMeal)" class="btn btn-info btn-lg" data-toggle="modal" data-target="#edit">Edit</button>
@@ -35,16 +35,10 @@ import { Meal } from './meal.model';
 
 export class MealListComponent {
   @Input() childMealList: Meal[];
-  @Output() clickSender = new EventEmitter();
-  @Output() clickSender2 = new EventEmitter();
+  @Output() editSender = new EventEmitter();
   public selectedAlpha = "none";
   public total = null;
   editButtonHasBeenClicked(MealToEdit: Meal) {
-    this.clickSender.emit(MealToEdit);
+    this.editSender.emit(MealToEdit);
   }
-
-  reviewButtonHasBeenClicked(MealToReview: Meal) {
-    this.clickSender2.emit(MealToReview);
-  }
-
 }
