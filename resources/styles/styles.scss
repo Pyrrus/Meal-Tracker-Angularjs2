@@ -1,0 +1,15 @@
+$padding: 25px; 
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron h1 {
+  padding-left: $padding;
+}
+
+.container {
+  background-color: gray;
+  padding: $padding $padding $padding $padding;
+  margin-bottom: 20px;
+}

@@ -5,7 +5,10 @@ import { Meal } from './meal.model';
   selector: 'meal-list',
   template: `
   <div class="row">
-    <div class="col-md-3">
+    <div class='col-md-4'>
+      <h3>Total Calories: {{childMealList | range:selectedRange | number}}</h3>
+    </div>
+    <div class="col-md-4">
       <div class="form-group">
         <label>Filter By Calories</label>
         <select class="form-control" (change)="onChangeRange($event.target.value)">
@@ -15,7 +18,7 @@ import { Meal } from './meal.model';
         </select>
       </div>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
       <button class="btn btn-info btn-lg" data-toggle="modal" data-target="#newMeal">Add Meal</button>
     </div>
    </div>

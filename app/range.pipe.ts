@@ -9,7 +9,6 @@ import {Meal} from './meal.model';
 export class RangePipe implements PipeTransform {
     transform(input: Meal[], range) {
       var rangeArray = [];
-      console.log(range);
       if (range !== "none") {
         for (var i = 0; i < input.length; i++) {
           if (input[i].calories >= 500 && range === "500") {
@@ -18,7 +17,7 @@ export class RangePipe implements PipeTransform {
           	rangeArray.push(input[i]);
           }
         }
-
+        
         rangeArray.sort(function(ob1, ob2) {
         	if (ob1.calories > ob2.calories) {
 		      return 1;

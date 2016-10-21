@@ -4,21 +4,22 @@ import { Meal } from './Meal.model';
 @Component({
   selector: 'my-app',
   template: `
-  <div class="container">
+  <div class="jumbotron">
     <h1>Meal Tracker list</h1>
-      <meal-list
-        [childMealList]="masterMealList"
-        (editSender)="showDetails($event)"
-       ></meal-list>
-      <new-meal
-        (newMealSender)="addMeal($event)"
-      ></new-meal>
-      <edit-meal
-        [editMeal]="selectedMeal"
-        (doneSender)="finished()"
-      ></edit-meal>
   </div>
-
+  <div class="container">
+    <meal-list
+      [childMealList]="masterMealList"
+      (editSender)="showDetails($event)"
+     ></meal-list>
+    <new-meal
+      (newMealSender)="addMeal($event)"
+    ></new-meal>
+    <edit-meal
+      [editMeal]="selectedMeal"
+      (doneSender)="finished()"
+    ></edit-meal>
+  </div>
   `
 })
 
