@@ -22,11 +22,11 @@ import { Meal } from './meal.model';
                   <input class="form-control" type="text" [(ngModel)]="editMeal.name" />
                 </div>
                 <div class="form-group">
-                  <label>Edit Cuisine</label>
+                  <label>Edit Details</label>
                   <textarea class="form-control" [(ngModel)]="editMeal.details"></textarea>
                 </div>
                 <div class="form-group">
-                  <label>Edit Address</label>
+                  <label>Edit Calories</label>
                   <input class="form-control" type="number" pattern="[0-9]" [(ngModel)]="editMeal.calories" />
                 </div>
               </div>

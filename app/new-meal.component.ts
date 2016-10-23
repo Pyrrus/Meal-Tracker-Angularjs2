@@ -19,11 +19,11 @@ import { Meal } from './Meal.model';
               <input class="form-control" #newName>
             </div>
             <div class="form-group">
-              <label>Enter Meal Specialty:</label>
+              <label>Enter Meal Details:</label>
               <textarea class="form-control" #newDetails></textarea>
             </div>
             <div class="form-group">
-              <label>Enter Meal Address:</label>
+              <label>Enter Meal Calories:</label>
               <input class="form-control" pattern="[0-9]" #newCalories>
             </div>
           </div>
